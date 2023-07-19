@@ -1,3 +1,4 @@
+<!--Code by Mohammad Alif-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,16 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>SMKN 6 Jakarta</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"></script>
-    <script src="script.js"></script>
+    <script src="notif.js"></script>
 </head>
-<body>
-    
+<body> 
+  <header>
+
+    <!-- sidebar -->
+		<input type="checkbox" id="check">
+		<div class="sidebar">
+			<ul>
+				<li><a href="#banner">Beranda</a></li>
+        <li><a href="#tentang">Tentang Kami</a></li>
+        <li><a href="#Jurusan">Jurusan</a></li>
+        <li><a href= "https://www.ebonews-smkn6jakarta.com" target="_blank" >Ebonews</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+        <li><a href="#PPDB">PPDB</a></li>
+			</ul>
+		</div>
+    <script src="sidebar.js"></script>
+
     <!--Navbar-->
     <nav class="navbar" style="background-color: #3038a8;">
         <div class="container navbar">
@@ -24,13 +40,17 @@
               <a class="logo-title" href="#">SMK Negeri 6</a>
             </a>
           </div>
-            <div class="menu">
-              <a href="#banner">Beranda</a>
-              <a href="#tentang">Tentang Kami</a>
-              <a href="#Jurusan">Jurusan</a>
-              <a href="#">Ebonews</a>
-              <a href="#kontak">Kontak</a>
-            </div>
+            
+          <div class="menu" id="menu_toggle">
+              <ul>
+                <li><a href="#banner">Beranda</a></li>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href="#Jurusan">Jurusan</a></li>
+                <li><a href= "https://www.ebonews-smkn6jakarta.com" target="_blank" >Ebonews</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+              </ul>
+          </div>
+
         </div>
 
             <div class="dropdown">
@@ -42,8 +62,10 @@
                 <li><button class="dropdown-item" type="button">Pendaftaran</button></li>
               </ul>
             </div>
-  </nav>    
-    
+     <!-- menu mobile -->
+     <label for="check" class="mobile-menu"><i class="fa-solid fa-bars fa-bounce"></i></label>
+    </nav>    
+    </header>
 
      <!-- Banner -->
 <section id="banner">
@@ -59,7 +81,7 @@
         </div>
       </button>
     </div>
-    <h1 class="heading">Selamat Datang di SMKN 6</h1>
+    <h1 class="heading">Where idea comes to reality</h1>
   </div>
 </section>
 
@@ -248,7 +270,7 @@
       <div class="section eks-item">
         <div class="row">
           <div class="col-md-6">
-            <img class="foto-eks" src="img/pexels-luis-gomes-546819.jpg">
+            <img class="foto-eks" src="img/coding-3d-llustration.png">
           </div>
           <div class="col-md-6">
             <div class="section-eks-head">
@@ -267,7 +289,7 @@
       <div class="section eks-item">
         <div class="row">
           <div class="col-md-6">
-            <img class="foto-eks" src="img/WhatsApp%20Image%202023-02-21%20at%2012.22.23.jpeg">
+            <img class="foto-eks" src="img/desain-grafis.jpg">
           </div>
           <div class="col-md-6">
             <div class="section-eks-head">
@@ -286,7 +308,7 @@
           <div class="section eks-item">
             <div class="row">
               <div class="col-md-6">
-                <img class="foto-eks" src="img/WhatsApp%20Image%202023-02-21%20at%2012.18.51.jpeg">
+                <img class="foto-eks" src="img/pramuka.jpg">
               </div>
               <div class="col-md-6">
                 <div class="section-eks-head">
@@ -304,7 +326,7 @@
           <div class="section eks-item">
             <div class="row">
               <div class="col-md-6">
-                <img class="foto-eks" src="img/WhatsApp%20Image%202023-02-25%20at%2007.01.28.jpeg">
+                <img class="foto-eks" src="img/paskib.jpg">
               </div>
               <div class="col-md-6">
                 <div class="section-eks-head">
@@ -386,9 +408,7 @@
               <div class="carousel-caption d-none d-md-block" style="color: rgba(255, 255, 255, 0.829);" >
                 <h5>Lapangan Futsal</h5>
               </div>
-
             </div>
-
 
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" style="color:rgba(102, 102, 102, 0.829);">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -399,7 +419,6 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-
       </section>
 
       <!--Prestasi-->
@@ -432,62 +451,11 @@
     <!--Penilaian-->
   <section>
     <h1 class="section-penilaian">Apa Kata Mereka?</h1>
-    <div class="container penilaian">
+    
 
-      <!--Penilaian -->
-      <div class="penilaian-item">
-        <img src="img/penilaian.jpg" alt="">
-        <h3 class="penilaian-head-3">Fanny</h3>
-        <h4 class="penilaian-head-4">Ketua OSIS</h4>
-        <div class="stars">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-        </div>
-        <p class="pnilaian-p">Aku senang sekali menjadi ketua OSIS di sekolah ini,
-          bisa bantu2 dan mengadakan kegiatan menarik disekolah ini, trimakasih juga berkat bantuan ibu bapak guru.
-        </p>
-      </div>
-      
-       <!--Penilaian -->
-       <div class="penilaian-item">
-        <img src="img/penilaian.jpg" alt="">
-        <h3 class="penilaian-head-3">Karl Emmanuel</h3>
-        <h4 class="penilaian-head-4">Anggota OSIS</h4>
-        <div class="stars">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-        </div>
-        <p class="pnilaian-p">Asik bngt temen²nya seru, bisa punya cewek wkwk. Suka sama warna gedungnya biru putih.</p>
-      </div>
-
-       <!--Penilaian -->
-       <div class="penilaian-item">
-        <img src="img/penilaian.jpg" alt="">
-        <h3 class="penilaian-head-3">Darminto</h3>
-        <h4 class="penilaian-head-4">Kepala Sekolah</h4>
-        <div class="stars">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-        </div>
-        <p class="pnilaian-p">Saya melihat perkembangan murid2 saya pada bidangnya masing2 dan juga beragam karya yang mereka hasilkan, Semangat terusss ya anak2 </p>
-      </div>
-
-    </div>
-  </section>
-      
   <!--YT SMKN 6-->
   <section class="yt-embed"> 
     <h1 class="section-yt">Ingin Tau Lebih Jauh?</h1>
-    
     <div class="center-video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/jbZ97wX1ObU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
@@ -498,46 +466,22 @@
     <h1 class="section-trima">Terima Kasih kepada</h1>
 </section>
     
-  <section class="margin-top">
-    <section class="company-logo">
-      <div class="logo-container">
-        <img src="img/Kominfo.png" alt="Company Logo 1">
-      </div>
-    </section>
-    
-    <section class="company-logo">
-      <div class="logo-container">
-        <img src="img/AWS.png" alt="Company Logo 2">
-      </div>
-    </section>
-    
-    <section class="company-logo">
-      <div class="logo-container">
-        <img src="img/Bootstrap.png" alt="Company Logo 3">
-        <h3>Bootstrap</h3>
-      </div>
-    </section>
-    
-    <section class="company-logo">
-      <div class="logo-container">
-        <img src="img/logo%20smkn6.png" alt="Company Logo 4">
-      </div>
-    </section>
-    
-    <section class="company-logo">
-      <div class="logo-container">
-        <img src="img/Logo_Belajar_Bersama.jpg" alt="Company Logo 5">
-      </div>
-    </section>
+  <section class="brand-logo-section">
+    <div class="logo-row">
+      <img src="img/Logo_Belajar_Bersama.jpg" alt="Logo 1">
+      <img src="img/Bootstrap.png" alt="Logo 2">
+      <img src="img/logo smkn6.png" alt="Logo 3">
+      <img src="img/MASKOT EBONAM EXPANDED.png" alt="Logo 4">
+    </div>
   </section>
 
-  <!--Footer-->  
+ 
 <section id="kontak">
   <footer>
    <div class="row">
       <div class="col">
         <img src="img/MASKOT%20EBONAM%20EXPANDED.png" class="logo-footer">
-        <a class="logo-title-footer" href="#">SMKN 6</a>
+        <a class="logo-title-footer" href="#">SMKN6</a>
       </div>
       <div class="col">
         <h3>Alamat</h3>
@@ -560,7 +504,7 @@
         </div>
       </div>
 
-    <!--Footer Akhir-->
+    
       <div class="footer-credit">
         <h5>&copy 2023 Eboteam, Alif X-PPLG & Angela X-DKV-1. All rights reserved.</h5>
       </div>

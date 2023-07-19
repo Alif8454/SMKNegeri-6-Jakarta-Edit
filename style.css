@@ -5,6 +5,16 @@
     font-family: Century Gothic; 
     text-decoration: none;
   }
+  
+  #check {
+    display: none;
+  }
+
+  .sidebar{
+    display: none;
+  }
+  
+
   body{
     position: relative;
     margin: 0;
@@ -14,9 +24,12 @@
     max-width: 1000px;
     margin: 0 auto;
   }
+  .container-logo{
+    padding-left: 30px;
+  }
   .logo {
-    width: 55px;
-    height: 70px;
+    width: 50px;
+    height: 60px;
   }
   .logo-title{
     color: #ffffff;
@@ -58,13 +71,15 @@
     display: flex;
     justify-content: space-between;
   }
-  .menu {
+  .menu ul  {
     display: flex;
     gap: 15px;
     font-size: 18px;
     padding-right: 10px;
+    padding-top: 15px;
+    list-style: none;
   }
-.menu a::before {
+.menu ul li a::before {
   content: "";
   position: absolute;
   width: 0;
@@ -74,10 +89,10 @@
   bottom: -5px;
   transition: 0.5s;
 }
-.menu a:hover{
+.menu ul li a:hover{
   color: #fffb07;
 }
-.menu a:hover::before {
+.menu ul li a:hover::before {
   width: 100%;
 }
 
@@ -130,22 +145,21 @@
   font-family: inherit;
   padding: 0.40em;
   margin: auto;
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   border-radius: 0.9em;
   border: none;
   letter-spacing: 0.05em;
   display: flex;
   overflow: hidden;
   position: absolute;
-  top: 25%; /* ubah nilai top menjadi 35% */
+  top: 29%; /* ubah nilai top menjadi 35% */
   left: 9%; /* ubah nilai left menjadi 50% */
   transform: translate(-50%, -50%);
   width: 10em;
   height: 2.8em;
   z-index: 1;
 }
-
 
 .cssbuttons-io-button .icon {
   background: white;
@@ -464,6 +478,7 @@
   text-align: center;
 }
 
+/* Penilaian */
 .section-penilaian{
   text-align: center;
   margin: 150px 0;
@@ -482,43 +497,7 @@
   background-color: #2750d6;
 }
 
-.penilaian{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 300px;
-}
-.penilaian-item{
-  width: 33%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.penilaian-item img{
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-.fa-star{
-  font-size: 1.3em;
-   color: rgb(255, 230, 0);
-   margin-bottom: 5px;
-}
-.penilaian-head-3{
-  padding-top: 5%;
-  text-align: center;
-  font-weight: 700;
-}
-.penilaian-head-4{
-  font-weight: 600;
-}
-.pnilaian-p{
-  padding-top: 5px;
-}
+
 
 .section-yt {
   text-align: center;
@@ -564,22 +543,23 @@
   background-color: #2750d6;
 }
 
-.company-logo {
-  background-color: #f7f7f7;
-  padding: 50px;
-  text-align: center;
-  margin: 20px;
-  flex: 200px;
+.brand-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.logo-container {
-  max-width: 200px;
-  margin: 0 auto;
+.logo-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
-.logo-container img {
-  max-width: 100%;
+.logo-row img {
+  max-width: 100px;
   height: auto;
+  margin: 0 10px;
 }
 
+/* footer */
 footer{
   max-width: inherit;
   position: absolute;
@@ -589,6 +569,7 @@ footer{
   background: linear-gradient(to right, #3038a8,rgb(64, 164, 245));
   padding: 100px 0 30px;
   border-top-left-radius: 100px;
+  margin-bottom: -500px;
 }
 .row{
   width: 85%;
@@ -687,6 +668,214 @@ footer{
     opacity: 1;
     transform: translateY(0);
   }
+}
+@media screen and (max-width: 720px) {
+  .container-logo{
+    padding-left: 3px;
+  }
+  .menu ul li a,
+  .dropdown{
+    display: none;
+  }
+  .heading{
+    position: absolute;
+    width: 520px;
+    height: 26px;
+    left: 40px;
+    top: 60px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    padding-top: 16%;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
+  /* button */
+  .cssbuttons-io-button {
+    background: #3038a8;
+    color: white;
+    font-family: inherit;
+    padding: 0.40em;
+    margin: auto;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    top: 40%; /* ubah nilai top menjadi 35% */
+    left: 18%; /* ubah nilai left menjadi 50% */
+    transform: translate(-50%, -50%);
+    width: 10em;
+    height: 2.8em;
+    z-index: 1;
+  }
+  .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em; /* ubah ukuran height menjadi 2em */
+    width: 2.2em; /* ubah ukuran width menjadi 2em */
+    border-radius: 0.7em;
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+  .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+  }
+  .cssbuttons-io-button .icon svg {
+    width: 2.5em;
+    font-size: 1.5em; /* menambahkan properti font-size dan mengubah nilainya */
+    transition: transform 0.3s;
+    color: #7b52b9;
+  }
+  .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+  }
+  .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+  }
+  
+  /* card */
+  .pengajar-kami{
+    display: flex;
+    flex-direction: column; /* Mengatur tampilan kartu menjadi vertikal */
+    align-items: center; /* Mengatur posisi kartu berada di tengah horizontal */
+    gap: 20px; /* Mengatur jarak antara kartu */
+    margin-bottom: 300px;
+    padding: 15px;
+  }
+  .pengajar-item {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-right: 5px;
+    padding-top: 5%;
+  }
+  .pengajar-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  /* Jurusan */
+  .jurusan {
+    display: flex;
+    flex-direction: column; /* Mengatur tampilan kartu menjadi vertikal */
+    align-items: center; /* Mengatur posisi kartu berada di tengah horizontal */
+    gap: 20px; /* Mengatur jarak antara kartu */
+    margin-bottom: 300px;
+    width: 50%;
+    margin-left: 17%;
+    padding-top: 2%;
+  }
+  .jur-item {
+    width: 70%;
+    background-color: #fff;
+    box-shadow: 0 3px 4px #ccc;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+  .jur-title{
+    padding-top: 12px;
+    padding-bottom: 2%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 26px;
+  }
+  .jur-p{
+    padding-top: 3px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 19px;
+  }
+  .jur-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  /* Ekskul */
+  .eks-item{
+    padding-bottom: 20px;
+  }
+  .section-eks-head,
+  .section-eks-p{
+    padding-left: 100px;
+    text-align: center;
+  }
+  .foto-eks{
+    margin-left: 50px;
+  }
+  /* Sidebar */
+  .fa-bars{
+    color: white;
+    height: 60px;
+    padding-right: 17px;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    background-color: rgba(19, 65, 216, 0.7); /* Warna transparan */
+    transition: 0.3s;
+    z-index: 9999;
+    display: none; /* Sidebar default tersembunyi */
+  }
+  
+  .sidebar ul li a{
+    text-decoration: none;
+    color: #f7f7f7;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 24px;
+    transition: 0.3s;
+    list-style: none;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #F84744;
+  }
+  
+  #check:checked ~ .sidebar {
+    display: block; /* Menampilkan sidebar saat checkbox di-check */
+  }
+
+  /* footer */
+  footer{
+    margin-bottom: -600px;
+  }
+  .social-icons ul li 
+  .fa-facebook-f,
+  .fa-twitter,
+  .fa-whatsapp,
+  .fa-instagram{
+    color: antiquewhite;
+    padding-top: 325px;
+    margin-left: 7px;
+  }
+
+   
 }
 
 
